@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div id="app" class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <h1 class="card-header text-center">{{ isSignIn ? 'Sign In' : 'Sign Up' }}</h1>
+                    <div class="card-body">
+                        <form v-if="isSignIn" @submit.prevent="signIn">
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input class="form-control" type="email" v-model="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Password</label>
+                                <div class="input-group">
+                                    <input :type="showPassword ? 'text' : 'password'" class="form-control" v-model="password" required>
+                                    <div class="input-group-append">
+                                        <span class="input-group-text" @click="togglePasswordVisibility" style="cursor: pointer;">
+                                            <i v-if="showPassword" class="material-icons">visibility</i>
+                                            <i v-else class="material-icons">visibility_off</i>
+                                        </span>                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group text-center">
+                                <button class="btn btn-primary">Sign In</button>
+                            </div>
+                            <div class="form-group text-center">
+                                <button type="button" class="btn btn-link" @click="toggleForm">Sign Up</button>
+                            </div>
+                        </form>
+                        <form v-else @submit.prevent="signUp">
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input class="form-control" type="email" v-model="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Password</label>
+                                <input class="form-control" type="password" v-model="password" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Confirm Password</label>
+                                <input class="form-control" type="password" v-model="confirmPassword" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Date of Birth</label>
+                                <input class="form-control" type="date" v-model="dob" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Mobile Number</label>
+                                <input class="form-control" type="tel" v-model="mobile" required>
+                            </div>
+                            <div class="form-group text-center">
+                                <button class="btn btn-primary">Sign Up</button>
+                            </div>
+                            <div class="form-group text-center">
+                                <button type="button" class="btn btn-link" @click="toggleForm">Sign In</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                isSignIn: true,
+                email: '',
+                password: '',
+                confirmPassword: '',
+                dob: '',
+                mobile: '',
+                showPassword: false
+            },
+            methods: {
+                toggleForm() {
+                    this.isSignIn = !this.isSignIn;
+                    this.clearFields();
+                },
+                clearFields() {
+                    this.email = '';
+                    this.password = '';
+                    this.confirmPassword = '';
+                    this.dob = '';
+                    this.mobile = '';
+                    this.showPassword = false;
+                },
+                signIn() {
+                    // Implement your sign in logic here
+                    console.log('Signing in...');
+                },
+                signUp() {
+                    // Implement your sign up logic here
+                    console.log('Signing up...');
+                },
+                togglePasswordVisibility() {
+                    console.log('Toggling password visibility...');
+                    this.showPassword = !this.showPassword;
+                    console.log('showPassword:', this.showPassword);
+                }
+            }
+        });
+    </script>
+</body>
+</html>

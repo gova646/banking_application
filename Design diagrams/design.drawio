@@ -1,0 +1,40 @@
+<mxfile host="app.diagrams.net" modified="2024-03-05T15:29:33.352Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" etag="BRO1Vr__S1Sopms4j5Ys" version="22.1.16" type="device">
+  <diagram name="Page-1" id="P1pdawzyc0Im5mBkuGYp">
+    <mxGraphModel dx="548" dy="284" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="e5ws18xlgh9xZkyQVlLJ-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="e5ws18xlgh9xZkyQVlLJ-1" target="e5ws18xlgh9xZkyQVlLJ-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5ws18xlgh9xZkyQVlLJ-1" value="Frontend&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="70" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e5ws18xlgh9xZkyQVlLJ-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="e5ws18xlgh9xZkyQVlLJ-8" target="e5ws18xlgh9xZkyQVlLJ-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5ws18xlgh9xZkyQVlLJ-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="e5ws18xlgh9xZkyQVlLJ-2" target="e5ws18xlgh9xZkyQVlLJ-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5ws18xlgh9xZkyQVlLJ-2" value="backend" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="320" y="70" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e5ws18xlgh9xZkyQVlLJ-5" value="db" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="650" y="300" width="60" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="e5ws18xlgh9xZkyQVlLJ-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="e5ws18xlgh9xZkyQVlLJ-2" target="e5ws18xlgh9xZkyQVlLJ-8">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="440" y="100" as="sourcePoint" />
+            <mxPoint x="660" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e5ws18xlgh9xZkyQVlLJ-8" value="microservice(authorisation,auth,)" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="570" y="40" width="220" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="e5ws18xlgh9xZkyQVlLJ-11" value="APIs" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="485" y="68" width="50" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
