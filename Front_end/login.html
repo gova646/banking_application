@@ -45,11 +45,28 @@
                             </div>
                             <div class="form-group">
                                 <label>Password</label>
-                                <input class="form-control" type="password" v-model="password" required>
+                                <div class="input-group">
+                                    <input :type="showPassword ? 'text' : 'password'" class="form-control" v-model="password" required>
+                                    <div class="input-group-append">
+                                        <span class="input-group-text" @click="togglePasswordVisibility" style="cursor: pointer;">
+                                            <i v-if="showPassword" class="material-icons">visibility</i>
+                                            <i v-else class="material-icons">visibility_off</i>
+                                        </span>                                        
+                                    </div>
+                                </div>
                             </div>
+                            
                             <div class="form-group">
                                 <label>Confirm Password</label>
-                                <input class="form-control" type="password" v-model="confirmPassword" required>
+                                <div class="input-group">
+                                    <input :type="showPassword ? 'text' : 'password'" class="form-control" v-model="confirmPassword" required>
+                                    <div class="input-group-append">
+                                        <span class="input-group-text" @click="togglePasswordVisibility" style="cursor: pointer;">
+                                            <i v-if="showPassword" class="material-icons">visibility</i>
+                                            <i v-else class="material-icons">visibility_off</i>
+                                        </span>                                        
+                                    </div>
+                                </div>
                             </div>
                             <div class="form-group">
                                 <label>Date of Birth</label>
@@ -73,46 +90,6 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
-    <script>
-        new Vue({
-            el: '#app',
-            data: {
-                isSignIn: true,
-                email: '',
-                password: '',
-                confirmPassword: '',
-                dob: '',
-                mobile: '',
-                showPassword: false
-            },
-            methods: {
-                toggleForm() {
-                    this.isSignIn = !this.isSignIn;
-                    this.clearFields();
-                },
-                clearFields() {
-                    this.email = '';
-                    this.password = '';
-                    this.confirmPassword = '';
-                    this.dob = '';
-                    this.mobile = '';
-                    this.showPassword = false;
-                },
-                signIn() {
-                    // Implement your sign in logic here
-                    console.log('Signing in...');
-                },
-                signUp() {
-                    // Implement your sign up logic here
-                    console.log('Signing up...');
-                },
-                togglePasswordVisibility() {
-                    console.log('Toggling password visibility...');
-                    this.showPassword = !this.showPassword;
-                    console.log('showPassword:', this.showPassword);
-                }
-            }
-        });
-    </script>
+    <script src="../scripts/login.js"></script>     
 </body>
 </html>
